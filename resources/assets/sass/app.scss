@@ -1,6 +1,8 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800');
+@import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+@import url('https://cdn.linearicons.com/free/1.0.0/icon-font.min.css');
 
 // Variables
 @import 'variables';
@@ -8,7 +10,71 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+//
+.no-border {
+  border: none;
+}
+
+// Navbar
+.navbar {
+  .nav-link {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+.sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: solid 1px rgba($white, .5);
+  min-height: 65px;
+
+  transition: all 500ms;
+
+  .navbar-brand, .nav-link {
+    color: $white;
+  }
+}
+
+.is-sticky {
+  background-color: $white;
+  box-shadow: 0 3px 3px rgba(0,0,0,.05);
+
+  .navbar-brand, .nav-link {
+    color: $dark;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+  }
+}
+
+// Header
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, rgba(41, 200, 155, 0.9), rgba(103, 200, 175, 0.9));
+}
+
+.header img {
+  z-index: 200;
+  width: 284px;
+}
+
+
+// Features
+#features {
+  .icon {
+    color: $teal;
+    font-size: 40px;
+  }
 }
