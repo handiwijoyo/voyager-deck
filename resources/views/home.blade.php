@@ -113,44 +113,19 @@
             </div>
         </div>
     </div>
-    <div id="blog" class="py-5">
-        <div class="container">
-            <h2 class="text-uppercase text-center">From Our Blog</h2>
-            <h5 class="mb-5 text-center text-muted">Vestibulum pharetra elit sed convallis elementum.</h5>
-            <div class="row mb-3">
-                <div class="col-md-4 mb-3 d-flex align-items-stretch">
-                    <div class="card no-border shadow">
-                        <a href="#"><img class="card-img-top img-fluid" src="/images/blog1.jpg" alt="Card image cap"></a>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Sed semper lacus non augue laoreet</a></h5>
-                            <p class="card-text">Vestibulum pharetra elit sed convallis elementum. Cras scelerisque a risus, id placerat mi imperdiet.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3 d-flex align-items-stretch">
-                    <div class="card no-border shadow">
-                        <a href="#"><img class="card-img-top img-fluid" src="/images/blog2.jpg" alt="Card image cap"></a>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Vivamus efficitur, augue quis aliquet congue</a></h5>
-                            <p class="card-text">Nullam id nisl auctor sapien finibus bibendum. Vivamus sit amet velit et tortor aliquam varius. Cras quis lacus eget sem.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3 d-flex align-items-stretch">
-                    <div class="card no-border shadow">
-                        <a href="#"><img class="card-img-top img-fluid" src="/images/blog3.jpg" alt="Card image cap"></a>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Curabitur auctor id sem quis rhoncus</a></h5>
-                            <p class="card-text">Nunc luctus leo at posuere sollicitudin. Donec tincidunt fringilla enim, vitae tincidunt velit dictum in. Morbi lacus enim, elementum sed.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="text-center">
-                <a href="/blog" class="btn btn-lg btn-primary text-white">Go to Blog</a>
-            </p>
-        </div>
-    </div>
+
+    @component('components.blog', ['posts' => $blog_posts])
+        @slot('title')
+            From Our Blog
+        @endslot
+        @slot('subtitle')
+            Vestibulum pharetra elit sed convallis elementum.
+        @endslot
+        @slot('button')
+            <a href="/blog" class="btn btn-lg btn-primary text-white">Go to Blog</a>
+        @endslot
+    @endcomponent
+
     <div id="closing" class="bg-white py-5">
         <div class="container">
             <h2 class="text-uppercase text-center">Start your project right now</h2>
